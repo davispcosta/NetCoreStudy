@@ -1,0 +1,21 @@
+﻿
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <table>
+        @foreach (var curso in Model.Cursos)
+        {
+            <tr>
+                <td>@curso.Id</td>
+                <td>@curso.Nome</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@curso.Id">Mais</a>
+                </td>
+            </tr>
+        }
+    </table>
+    <a asp-action="Create"></a>
+</body>
+</html>
